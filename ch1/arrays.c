@@ -1,5 +1,15 @@
 #include <stdio.h>
 
+void print_array(int arr[], int size)
+{
+    printf("[");
+    for (int i = 0; i < size - 1; i++)
+    {
+        printf("%d, ", arr[i]);
+    }
+    printf("%d]\n", arr[size - 1]);
+}
+
 int main(int argc, char const *argv[])
 {
     /*
@@ -7,4 +17,7 @@ int main(int argc, char const *argv[])
     */
     int arr[3] = {0, 1, 2};
     printf("%d\n", arr[4]);
+    print_array(arr, 3);
+
+    return 0;
 }
